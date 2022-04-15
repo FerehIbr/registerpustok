@@ -8,19 +8,40 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb--30 mb-lg--0">
                 <!-- Login Form s-->
-                <form action="#">
+                <form method="post">
                     <div class="login-form">
                         <h4 class="login-title">New Customer</h4>
                         <p><span class="font-weight-bold">I am a new User</span></p>
                         <div class="row">
-
                             <div class="col-12 mb--20">
-                                <label for="email">Email</label>
+                                <label asp-for="Name"></label>
                                 <input class="mb-0 form-control" asp-for="Name" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="col-12 mb--20">
-                                <label for="email">Email</label>
-                                <input class="mb-0 form-control" asp-for="Name" placeholder="Enter Your Email Address Here..">
+                                <label asp-for="SurName"></label>
+                                <input class="mb-0 form-control" asp-for="SurName" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="SurName" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb--20">
+                                <label asp-for="UserName"></label>
+                                <input class="mb-0 form-control" asp-for="UserName" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb--20">
+                                <label asp-for="Email"></label>
+                                <input class="mb-0 form-control" asp-for="Email" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb--20">
+                                <label asp-for="Password"></label>
+                                <input class="mb-0 form-control" asp-for="Password" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb--20">
+                                <label asp-for="ConfirmPassword"></label>
+                                <input class="mb-0 form-control" asp-for="ConfirmPassword" placeholder="Enter Your Email Address Here..">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
 
                             <div class="col-md-12">
@@ -55,4 +76,8 @@
         </div>
     </div>
 </main>
+@section Script{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}
 
